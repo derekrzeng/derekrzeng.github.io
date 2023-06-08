@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMAAAAAAAAAAAAxvPMAAAAAAAAAAAAxvPMAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMAAAAAAAAAAAAxvPMAAAAAAAAAAAAxvPMAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMAAAAAAAAAAAAxvPMAAAAAAAAAAAAxvPMAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMAAAAAAAAAAAAAAAAxvPMAAAAxvPMAAAAAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMAAAAAAAAAAAAAAAAxvPMAAAAxvPMAAAAAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMAAAAAAAAAAAAAAAAxvPMAAAAxvPMAAAAAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMAAAAAAAAAAAAAAAAAAAAxvPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxvPMxvPMxvPMAAAAAAAAAAAAAAAAAAAAxvPMxvPMxvPMAAAAAAAAAAAAAAAAxvPMAAAAxvPMAAAAxvPMAAAAAAAAAAAAxvPMxvPMxvPMxvPMxvPMAAAAAAAAAAAAxvPMAAAAxvPMAAAAxvPMAAAAAAAAAAAAxvPMxvPMxvPMxvPMxvPMxvPMAAAAAAAAxvPMxvPMAAAAxvPMxvPMAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMxvPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxvPMxvPMxvPMxvPMxvPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxvPMxvPMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" type="image/x-icon" />
+  <title>Rock, Paper, Scissors</title>
+  <script type="module" crossorigin src="/assets/index-682cfff4.js"></script>
+  <link rel="stylesheet" href="/assets/index-bd9b91e0.css">
+</head>
+
+<body>
+  <h1>Rock, Paper, Scissors</h1>
+
+  <div id="app">
+    <div id="top">
+      <h2 id="score">0000</h2>
+      <h2 id="timer">0:30</h2>
+    </div>
+
+    <div id="change">
+      <h3 id="winner"></h3>
+      <h3 id="plus"></h3>
+    </div>
+
+    <div id="bottom">
+
+      <div id="user">
+
+        <div id="user-name-pic">
+          <img src="/assets/cool-5d377b3a.webp" id="user-pfp">
+          <h3 id="user-name">Name</h3>
+        </div>
+
+        <div id="buttons">
+          <img src="/assets/rock-50d6cb0b.png" alt="ROCK" class="user-select" id="rock">
+          <img src="/assets/paper-50d22f39.jpg" alt="PAPER" class="user-select" id="paper">
+          <img src="/assets/scissors-8ea816b6.jpg" alt="SCISSORS" class="user-select" id="scissors">
+        </div>
+
+      </div>
+
+      <div id="byte">
+
+        <div id="byte-name-pic">
+          <img src="/assets/byte-ee9661fc.png" id="byte-pfp">
+          <h3 id="byte-name">Byte</h3>
+        </div>
+
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAABpCAYAAAD7nov7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMfSURBVHhe7d2LcqsgFIXh4On7P3Jz2CiJy6ISbxH4v6lTmxhxdAG7HZu4H/fz9B5j9tPTvdeHVeH8a6aP22vee0q9qmfPdMPzfdPafsr4mNLG+1jfX1m64fuacJb61Y1WW1q8Bq8DSC3zlp/dyo50vGCL3OihEckpo+d7mf+yYdr5Pm1ThElv29MpYzlr/4ZefNyUMRa27lerkNdv3XDN9lhsKe57ZxsoSF4NUVNnw6L1QBCGpuRNTmhGKCqHdREeXCggU4XbZ0Vl72mvWGpmqGBCa9nFTNi6X61CXr89vag81/iixfW5BVfZGQiL49yCEu0IRCIEYUyPC0r0xSkDd+Q61x02SX+yI/vrZ573aJO//9rqjutGXOfVdvawA1MGBIGAIBAQBAKCQEAQCAgCAUEgIAgEBIGAIBAQBAKCQEAQCAgCAUEgIAgEBIGAIBAQBAKCQEAQCAgCAUEgIAgEBIGAIBAQBAKCQEAQCAgCAUEgIAgEBIGAIBAQBAKCQEAQiMZN32aWQEAQCMj7vLqu62Y+cwu1CdPDyqVmhIDwgZiWFWjZEAigx5QB4YtK+yDXX79KYdmiOD/Eq88I0bjpMDAEIhaW1BMtGodiNEIQCDBlYMK5P5+5RXHZMj5zC4IpA4JAQBAICAIBQSAgCAQEgYAgEBAEAoJAQBAICAKxyG4HsFPUzm0BBCILgWhQvEFourSFQLwQBkMgIDYH4qo+dJ/+ep8jOVMRI0S4p+vr93XVHwbDlPHCnYQm657K0DdWtnr6jfaeUmtjrg/avq0NnCtvhNh7pVGMYqaMMEoNy3fd4yjOUlYNEeaNu4SiTsUEItYQR9QqmLf5H3ViHzn74sRCMwbiWtbgWqPhyPrVCtx/hPDXIwTh8jC0aXMgruoXsZ16+uAZjusxZRWVmBEDsT8UBAJic1HZhrkeZ4/H03bl6Usdz/Sx3ONJb0cgPmYXwBZ7o7arxbaPkD5+poxN6u1DBOJjFoabBeLpL6MtB4weBKIG4a93xwSVGqI4qVFgy8hADVGJOBKMl+MQiCpYbz/m7alvFogjf63C5x6P/1JenApEYGdtAAAAAElFTkSuQmCC" id="byte-output">
+
+      </div>
+
+    </div>
+
+
+    <div class="modalcontainer">
+
+      <div class="modal">
+        <h1 id="title">Directions</h1>
+        <p id="message">Welcome to Rock, Paper, Scissors! You have 30 seconds to play against Byte. A win gives you
+          +100 points, a draw gives +30 points, while a loss is -50 points. Score as much as you can, then see how you
+          stack
+          against the other competitors when the results pop up. The timer will run once you hit "START," so take a deep
+          breath, get ready, and good luck!</p>
+
+        <div id="scores">
+
+        </div>
+
+        <button id="start">START</button>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+</body>
+
+</html>
